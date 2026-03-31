@@ -33,15 +33,18 @@ layout: default
 
                         {% if page.type == "vimeo" %}
                             {% if page.vimeo-embed %}
-                                <div class="video-container">
+                                    <div class="post-video">
+      <div class="post-video__wrap">
                                     {{ page.vimeo-embed }}
                                 </div>
+								</div>
                             {% endif %}
                         {% elsif page.type == "youtube" %}
                             {% if page.yt-video-id %}
-                                <div class="video-container">
+                                <div class="post-video">
+      <div class="post-video__wrap">
                                     <iframe src="https://www.youtube.com/embed/{{page.yt-video-id}}?feature=player_detailpage" allowfullscreen></iframe>
-                                </div>
+                                </div></div>
                             {% endif %}
                         {% elsif page.type == "image" or page.type == "gallery" %}
                             {% if page.featimg %}
