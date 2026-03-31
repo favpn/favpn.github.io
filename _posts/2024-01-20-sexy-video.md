@@ -2,7 +2,7 @@
 layout: post
 author: person
 type: vimeo
-vimeo-embed: <iframe src="https://pt.xhamster.com/embed/4504907" loading="lazy" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+vimeo-embed: <iframe src="https://pt.xhamster.com/embed/4504907" loading="lazy" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 title: Vimeo
 homedisplay: iframe
 tags: [video, iframe]
