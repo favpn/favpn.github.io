@@ -1,8 +1,8 @@
 #-------------------------------
 # Site Settings
 title: Fav Porn
-logo: "/images/logo-light.png" # You can add own logo. For example '/images/logo.png'.
-logo_dark: "/images/logo-dark.png"
+logo: "/images/logo.svg" # You can add own logo. For example '/images/logo.png'.
+logo_dark: "/images/logo-dark.svg"
 description: Baleon is a stylish and multifunctional theme for Jekyll
 color_scheme: auto # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
 
@@ -19,8 +19,8 @@ menu_settings:
       url: '/projects/'  
     - title: 'About'
       url: '/about/'
-    - title: 'Mastery'
-      url: '/mastery/'
+    - title: 'Elements'
+      url: '/elements/'
 
 
 # Call to action button
