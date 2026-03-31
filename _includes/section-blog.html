@@ -20,19 +20,39 @@
           <div class="article__content">
 
             <div class="article__head">
-			{{ post.content }}
-              {% if post.image and post.video_embed %}
-              <div class="video-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                  <polygon points="40,30 65,50 40,70"></polygon>
-                </svg>
-              </div>
-              {% endif %}
-              {% if post.image %}
-              <a href="{{ post.url | relative_url }}" class="article__image">
-                <img class="lazy" data-src="{{ post.image | relative_url }}" alt="{{ post.title }}">
-              </a>
-              {% endif %}
+    {% if post.homedisplay == "iframe" %}
+        {% if post.type == "vimeo" %}
+            {% if post.vimeo-embed %}
+                <div class="video-container">
+                    {{ post.vimeo-embed }}
+                </div>
+            {% endif %}
+        {% elsif post.type == "youtube" %}
+            {% if post.yt-video-id %}
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" allowfullscreen></iframe>
+                </div>
+            {% endif %}
+        {% elsif post.type == "audio" %}
+            {% if post.audio-embed %}
+                <div class="video-container">
+                    {{ post.audio-embed }}
+                </div>
+            {% endif %}
+        {% else %}
+            {% if post.featimg %}
+                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
+                    {% if post.featimg contains '.png'%}
+                    {% assign thumb = post.featimg | replace: '.png', '' %}
+                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.png' }}" alt="{{ thumb }}">
+                    {% elsif post.featimg contains '.jpg'%}
+                    {% assign thumb = post.featimg | replace: '.jpg', '' %}
+                        <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.jpg' }}" alt="{{ thumb }}">
+                    {% endif %}
+                </a>
+            {% endif %}
+    {% endif %}
+
             </div>
 
             <div class="article__info">
