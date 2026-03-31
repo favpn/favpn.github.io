@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Capturing Credentials Submitted Through HTTP with Wireshark
+title: sexy-video
 date: 2024-01-20 15:01:35 +0300
 image: '/images/920.png'
 tags: [Cybersecurity, Network Security, Tools]
