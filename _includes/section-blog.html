@@ -19,7 +19,13 @@
         <div class="article col col-6 col-t-12">
           <div class="article__content">
             <div class="article__head">
-					      {% if post.homedisplay == "iframe" %}
+
+              <div class="video-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <polygon points="40,30 65,50 40,70"></polygon>
+                </svg>
+              </div>
+			  					      {% if post.homedisplay == "iframe" %}
         {% if post.type == "vimeo" %}
             {% if post.vimeo-embed %}
                 <div class="post-video">
@@ -35,11 +41,6 @@
                 </div></div>
             {% endif %}
 			{% endif %}
-              <div class="video-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                  <polygon points="40,30 65,50 40,70"></polygon>
-                </svg>
-              </div>
               {% endif %}
               {% if post.image %}
               <a href="{{ post.url | relative_url }}" class="article__image">
