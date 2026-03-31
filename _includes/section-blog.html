@@ -18,22 +18,35 @@
         {% for post in site.posts offset:0 limit:4 %}
         <div class="article col col-6 col-t-12">
           <div class="article__content">
+{% if page.type == "vimeo" %}
+                            {% if page.vimeo-embed %}
+                                <div class="video-container">
+                                    {{ page.vimeo-embed }}
+                                </div>
+                            {% endif %}
+                        {% elsif page.type == "youtube" %}
+                            {% if page.yt-video-id %}
+                                <div class="video-container">
+                                    <iframe src="https://www.youtube.com/embed/{{page.yt-video-id}}?feature=player_detailpage" allowfullscreen></iframe>
+                                </div>
+                            {% endif %}
+                        {% elsif page.type == "image" or page.type == "gallery" %}
+                            {% if page.featimg %}
+                                <img class="featimg" src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/{{ page.featimg }}" alt="{{ page.featimg }}">
+                            {% endif %}
+                        {% elsif page.type == "audio" %}
+                            {% if page.audio-embed %}
+                                {{ page.audio-embed }}
+                            {% endif %}
+                        {% endif %}
 
             <div class="article__head">
               {% if post.image and post.video_embed %}
-    {% if post.homedisplay == "iframe" %}
-        {% if post.type == "vimeo" %}
-            {% if post.vimeo-embed %}
-                <div class="video-container">
-                    {{ post.vimeo-embed }}
-                </div>
-            {% endif %}
-        {% elsif post.type == "youtube" %}
-            {% if post.yt-video-id %}
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" allowfullscreen></iframe>
-                </div>
-            {% endif %}
+              <div class="video-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <polygon points="40,30 65,50 40,70"></polygon>
+                </svg>
+              </div>
               {% endif %}
               {% if post.image %}
               <a href="{{ post.url | relative_url }}" class="article__image">
