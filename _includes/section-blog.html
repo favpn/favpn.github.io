@@ -20,8 +20,12 @@
           <div class="article__content">
 
             <div class="article__head">
+			{{ post.content }}
               {% if post.image and post.video_embed %}
-{{ post.content }}
+              <div class="video-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <polygon points="40,30 65,50 40,70"></polygon>
+                </svg>
               </div>
               {% endif %}
               {% if post.image %}
