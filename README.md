@@ -1,128 +1,226 @@
-⚠️⚠️ This project is not maintained anymore ⚠️⚠️
+# Jekflix Template
 
-## Cards Jekyll Template - [Demo](https://willianjusten.github.io/cards-jekyll-template)
+![Jekflix Template Cover Image](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1505354182/jekflix-logo_mfngps.png)
 
-![Screenshot](screenshot.png)
+> **⚠️ This project is no longer being maintained.**
 
-This is a simple and minimalist template for Jekyll designed for developers that want to write blog posts but don't want to care about frontend stuff.
+See the [demo here](https://jekflix.rossener.com/).
 
-The Theme features:
+## What is it?
 
-- Gulp
-- Stylus (Jeet, Rupture, Kouto Swiss)
-- Live Search
-- Offcanvas Menu
-- SVG icons
-- Very very small and fast!
-- Shell Script to create posts
-- Tags page
-- Series page
-- About Me page
-- Feed RSS
+A theme for Jekyll inspired by Netflix panel for who loves movies and series and would like to have a blog with this cool appearance.
+
+![Jekflix Screenshot Image](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566390829/jekflix-screenshot-2_zfiog2.jpg)
+
+## Features
+
+- [Live Search](docs/features.md#live-search)
+- [Estimated Reading Time](docs/features.md#estimated-reading-time)
+- [Reading Progress Bar](docs/features.md#reading-progress-bar) *(optional)*
+- ["New Post" tag](docs/features.md#new-post-tag)
+- [Load images on demand](docs/features.md#load-images-on-demand)
+- [Push Menu](docs/features.md#push-menu)
+- [SVG icons](docs/features.md#svg-icons)
+- [Shell script to create posts](docs/features.md#shell-script-to-create-posts)
+- [Tags page](docs/features.md#tags-page)
+- [About page](docs/features.md#about-page)
+- [Contact page](docs/features.md#contact-page)
+- [404 error page](docs/features.md#404-error-page)
+- [Feed RSS](docs/features.md#feed-rss)
+- [Disqus](docs/features.md#disqus) *(optional)*
+- [Featured post](docs/features.md#featured-post) *(optional)*
+- [Home page pagination](docs/features.md#home-page-pagination) *(optional)*
+- [Posts sidebar](docs/features.md#posts-sidebar) *(optional)*
+- [Paginated posts](docs/features.md#paginated-posts) *(optional)*
+- ["Before you go" modal](docs/features.md#before-you-go-modal) *(optional)*
+- [Post recommendation](docs/features.md#post-recommendation)
+- [Netlify CMS ready](docs/features.md#netlify-cms-ready)
+- [Translations](docs/setup.md#translations) **new!**
+- [Math Expressions](docs/features.md#math-expressions) *(optional)* **new!**
+
+## SEO
+
+- Google Analytics
+- Meta tags
+- JSON-LD
 - Sitemap.xml
-- Color Customization
-- Info Customization
+- Social Media ready
 
-If you want to see this template in real action, take a look at my [original site](http://willianjusten.com.br/).
+## Quick Install
 
-## Basic Setup
-
-1. [Install Jekyll](http://jekyllrb.com) (use the command ```sudo gem install jekyll```)
-2. Fork the [Cards Jekyll Template](https://github.com/willianjusten/cards-jekyll-template/fork)
-3. Clone the repo you just forked.
-4. Edit `_config.yml` to personalize your site.
-5. Check out the sample posts in `_posts` to see examples for assigning categories and tags, and other YAML data.
-6. Read the documentation below for further customization pointers and documentation.
-7. **Remember to compile your assets files with Gulp.**
-
-## Site and User Settings
-
-You have to fill some informations on `_config.yml` to customize your site.
+In the case you're installing to existing Jekyll project, add this line to your project's `Gemfile`:
 
 ```
-# Site settings
-title: Willian Justen - Desenvolvedor Front End
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "" # the subpath of your site, e.g. /blog/ or empty.
-url: "http://localhost:3000" # the base hostname & protocol for your site 
-
-# User settings
-username: Lorem Ipsum
-user_description: Anon Developer at Lorem Ipsum Dolor
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
-disqus_username: lorem_ipsum
+gem "jekflix"
 ```
 
-## Header Name
-
-To use the power of CSS Content and media query, the header name is defined on [src/styl/_header.styl](src/styl/_header.styl). Change to your prefered name.
-
-## Color customization
-
-All color variables are in [src/styl/_variables.styl](src/styl/_variables.styl). To change the main color, just set the new value at `main` assignment. Another colors are for texts and the code background color.
-
-## Theme Colors
-
-Every post has a main color that is defined on [src/styl/_theme-colors.styl](src/styl/_theme-colors.styl). Just create a new color with the prefix `post-` and define your main-class: 'css' and color: '#2DA0C3' on every post you create.
-
-## Creating posts
-
-You can use the `initpost.sh` to create your new posts. Just follow the command:
+Add this line to your project's `_config.yml`:
 
 ```
-./initpost.sh -c Post Title
+theme: jekflix
 ```
 
-The new file will be created at `_posts` with this format `date-title.md`.
+And then run:
 
-## Front-matter 
+```
+$ bundle
+```
 
-When you create a new post, you need to fill the post information in the front-matter, follow this example:
+Or install it yourself as:
+
+```
+$ gem install jekflix
+```
+
+### Theme Colors
+
+Create the file `/assets/css/styles.scss` and add:
 
 ```
 ---
-layout: post
-title: "Falando sobre RSCSS"
-date: 2016-02-07 18:48:16
-image: '/assets/img/rscss/rscss.png'
-description: 'Escrevendo CSS sem perder a sanidade. Aprenda uma metodologia que pode salvar muitas dores de cabeça.'
-main-class: 'css'
-color: '#2DA0C3'
+---
+
+$themeColor: #ff0a16;
+$primaryDark: #141414;
+$accentDark: #ffffff;
+$lightGray: #f2f2f2;
+$texts: #333333;
+
+@import "jekflix";
+```
+
+Modify the variables above to change your theme colors.
+
+### Site configuration
+
+Below are some properties you can change in your project `_config.yml`, check the [documentation](docs/settings.md#settings) for more details.
+
+```
+# Site Settings
+name: Jekflix
+title: Jekflix | A blog theme for Jekyll
+description: Jekflix is a template for Jekyll inspired by Netflix and made by Thiago Rossener.
 tags:
-- css
-- metodologia
-- frontend
-categories:
-twitter_text: 'Escrevendo CSS sem perder a sanidade.'
-introduction: 'Escrevendo CSS sem perder a sanidade. Com essa introdução, Rico St. Cruz o criador chama a atenção de todos sobre uma metodologia melhor para se escrever CSS.'
----
+  - blog
+  - template
+  - jekyll
+  - theme
+  - netlify
+email: youremail@xyz.com
+disqus_username: disqus_username
+show_hero: true
+menu:
+  - title: Home
+    url: /
+  - title: About
+    url: /about
+  - title: Contact
+    url: /contact
+  - title: Feed
+    url: /feed.xml
+
+# Social Media Settings
+# Remove the item if you don't need it
+github_username: github_username
+facebook_username: facebook_username
+twitter_username: twitter_username
+instagram_username: instagram_username
+linkedin_username: linkedin_username
+medium_username: medium_username
+
+# Posts Settings
+show_time_bar: true
+show_modal_on_exit: false
+show_modal_on_finish_post: true
+two_columns_layout: true
+
+# Advanced Settings
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+google_analytics: "UA-XXXXXXXX-X"
+language: "en"
+categories_folder: category
+sent_message_url: "/contact/message-sent/"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+collections:
+  authors:
+    output: true
+paginate_path: "/page/:num/"
+show_get_theme_btn: true
+use_logo: false
+
+# Content paginator
+paginate_content:
+  enabled: true
+  debug: false
+  collections:
+    - posts
+  auto: false
+  separator: "--page-break--"
+  permalink: "/:num/"
+  seo_canonical: true
+  properties:
+    part:
+      is_generated: true
+    last:
+      is_generated: true
+    single:
+      is_generated: true
+
+# SASS
+sass:
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-paginate-content
 ```
 
-## Running the blog in local
+## Setup
 
-In order to compile the assets and run Jekyll on local you need to follow those steps:
+In the case you're cloning this repo, follow those instructions:
 
-- Install [NodeJS](https://nodejs.org/) (remember to use the latest version)
-- Run `npm install`
-- Run `npm install -g gulp gulp-cli`
-- Run `gulp`
+- [Environment](docs/setup.md#environment)
+- [Installing template](docs/setup.md#installing-template)
+- [Running local](docs/setup.md#running-local)
 
-## Questions
+### Customization
 
-Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@willian_justen](https://twitter.com/willian_justen) or file a [GitHub Issue](https://github.com/willianjusten/will-jekyll-template/issues/new).
+See the [settings documentation](docs/settings.md#settings) to customize layout, titles, social media and more.
 
+### Theme
 
-## Donation
+You can easily change the theme colors by changing the file `src/yml/theme.yml`, then running `gulp build` in your terminal.
 
-If you liked my work, buy me a coffee <3
+#### GitHub pages
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UTMFZUHX6EUGE)
+It's a known issue that you can't run Gulp when deploying the website into GitHub pages. So, you must change the theme colors and run `gulp build` locally, then push the changes into your repo, there is no other way.
+
+To see how your website is going to look like when you deploy it, run `bundle exec jekyll serve` locally and access `http://127.0.0.1:4000/`.
+
+## Posts
+
+Use the [Front Matter properties](docs/post.md#front-matter-properties) to create posts.
+
+> **Note:** In the case you're cloning this repo, you can use the available [script](docs/post.md#creating-a-post) to generate posts automatically.
+
+## Questions?
+
+File a [GitHub issue](https://github.com/thiagorossener/jekflix-template/issues/new) please.
+
+## Author
+
+[Thiago Rossener](https://rossener.com/)
+
+Do you like my work? Buy me a coffee!
+
+<a href="https://www.buymeacoffee.com/thiagorossener" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## License
 
-This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer.
-
-If you’d like to give me credit somewhere on your blog or tweet a shout out to [@willian_justen](https://twitter.com/willian_justen), that would be pretty sweet.
+*Jekflix Template* is available under the MIT license. See the [LICENSE](https://github.com/thiagorossener/jekflix-template/blob/master/LICENSE) file for more info.
