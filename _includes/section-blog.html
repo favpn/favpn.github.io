@@ -18,22 +18,6 @@
         {% for post in site.posts offset:0 limit:4 %}
         <div class="article col col-6 col-t-12">
           <div class="article__content">
-		      {% if post.homedisplay == "iframe" %}
-        {% if post.type == "vimeo" %}
-            {% if post.vimeo-embed %}
-                <div class="post-video">
-      <div class="post-video__wrap">
-                    {{ post.vimeo-embed }}
-                </div></div>
-            {% endif %}
-        {% elsif post.type == "youtube" %}
-            {% if post.yt-video-id %}
-                <div class="post-video">
-      <div class="post-video__wrap">
-                    <iframe src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" allowfullscreen></iframe>
-                </div></div>
-            {% endif %}
-			{% endif %}
             <div class="article__head">
               <div class="video-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
