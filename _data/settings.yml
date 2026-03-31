@@ -1,8 +1,8 @@
 #-------------------------------
 # Site Settings
 title: Micah
-logo: "/images/Micah.svg" # You can add own logo. For example '/images/logo.png'.
-logo_dark: "/images/Micah-dark.svg"
+logo: "/images/logo.png" # You can add own logo. For example '/images/logo.png'.
+logo_dark: "/images/logo-dark.svg"
 description: My personal website showcasing my work and projects.
 color_scheme: auto # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
 
