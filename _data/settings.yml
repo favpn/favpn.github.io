@@ -15,46 +15,46 @@ menu_settings:
       url: '/'
     - title: 'Blog'
       url: '/blog/'
-    - title: 'Projects'
-      url: '/projects/'  
-    - title: 'About'
-      url: '/about/'
-    - title: 'Elements'
-      url: '/elements/'
+#    - title: 'Projects'
+#      url: '/projects/'  
+#    - title: 'About'
+#      url: '/about/'
+#    - title: 'Elements'
+#      url: '/elements/'
 
 
 # Call to action button
 cta_button:
   enable: true
-  cta_button_link: "/cyberfolio/contact/"
-  cta_button_text: Say Hello!
+  cta_button_link: "/shuffle-videos/"
+  cta_button_text: Shuffle 5 videos!
 
 
 #-------------------------------
 # Author Settings
 author:
-  author_intro: Hey, I’m Ty
-  author_name: Ty Fisher
-  author_role: Cybersecurity Specialist | SOC Analyst
-  author_avatar: /images/01.jpg
+  author_intro: My Favorite Porn
+  author_name: FavPN
+  author_role: My best porn videos collection!
+  author_avatar: /images/logo-dark.svg
 
 
 #-------------------------------
 # Sidebar Section Settings
 sidebar:
-  sidebar_title: Mastering Cybersecurity <em>Interactive Labs,</em> <em>Security Insights,</em> <em>Defense Strategies</em>. # You can add an 'em' element to highlight text.
-  sidebar_description: Welcome to a journey of discovery and growth in the ever-evolving field of cybersecurity. True understanding lies not in simply acquiring knowledge, but in sharing it to empower and inspire others. This repository is designed to be more than a collection of insights—it’s a resource and a guide for those seeking to learn, practice, and excel, fostering a collaborative path toward mastery.
+#  sidebar_title: Mastering Cybersecurity <em>Interactive Labs,</em> <em>Security Insights,</em> <em>Defense Strategies</em>. # You can add an 'em' element to highlight text.
+#  sidebar_description: Welcome to a journey of discovery and growth in the ever-evolving field of cybersecurity. True understanding lies not in simply acquiring knowledge, but in sharing it to empower and inspire others. This repository is designed to be more than a collection of insights—it’s a resource and a guide for those seeking to learn, practice, and excel, fostering a collaborative path toward mastery.
 
 #-------------------------------
 # Social Links
 social:
-- {icon: "fa-brands fa-x-twitter", name: "Twitter", link: "https://twitter.com"}
-- {icon: "fa-brands fa-facebook", name: "Facebook", link: "https://facebook.com"}
-- {icon: "fa-brands fa-github", name: "Github", link: "https://github.com"}
-- {icon: "fa-brands fa-mastodon", name: "Mastodon", link: "https://mastodon.social"}
-- {icon: "fa-brands fa-instagram", name: "Instagram", link: "https://instagram.com"}
-- {icon: "fa-brands fa-spotify", name: "Spotify", link: "https://spotify.com"}
-- {icon: "fa-brands fa-vimeo-v", name: "Vimeo", link: "https://vimeo.com"}
+#- {icon: "fa-brands fa-x-twitter", name: "Twitter", link: "https://twitter.com"}
+#- {icon: "fa-brands fa-facebook", name: "Facebook", link: "https://facebook.com"}
+#- {icon: "fa-brands fa-github", name: "Github", link: "https://github.com"}
+#- {icon: "fa-brands fa-mastodon", name: "Mastodon", link: "https://mastodon.social"}
+#- {icon: "fa-brands fa-instagram", name: "Instagram", link: "https://instagram.com"}
+#- {icon: "fa-brands fa-spotify", name: "Spotify", link: "https://spotify.com"}
+#- {icon: "fa-brands fa-vimeo-v", name: "Vimeo", link: "https://vimeo.com"}
 
 # Example of adding a new link to the footer - {icon: "fa-brands fa-pinterest", name: "Pinterest", link: "https://pinterest.com"}
 # Other icons can be found at https://fontawesome.com/icons
@@ -63,7 +63,7 @@ social:
 #-------------------------------
 # Projects Settings
 projects:
-  enable: true
+  enable: false
   projects_title: Cyber Labs <em>Showcase</em> # You can add an 'em' element to highlight text.
   projects_description: Engage in hands-on practice through guided walkthroughs that replicate real-world cybersecurity scenarios. Each exercise is carefully designed to immerse you in the tools, techniques, and challenges faced by professionals. These simulations help you develop technical expertise, sharpen problem-solving skills, and build the confidence to navigate the ever-changing cybersecurity landscape.
 
@@ -71,7 +71,7 @@ projects:
 #-------------------------------
 # Testimonials Settings
 testimonials:
-  enable: true
+  enable: false
   testimonials_title: SOC Analyst <em>Tool Kit</em> # You can add an 'em' element to highlight text.
   testimonials_description: These are just a few of the powerful tools leveraged as a SOC analyst. Staying one step ahead of the adversary is the name of the game, and mastering these technologies ensures we’re always ready to defend against evolving threats.
 testimonial-items:
@@ -126,7 +126,7 @@ blog:
   #-------------------------------
 # Faq (Frequently asked questions) Settings
 faq:
-  enable: true
+  enable: false
   faq_title: Questions? <em>Answers</em>. # You can add an 'em' element to highlight text.
   faq_description: Find solutions to common queries here.
 
@@ -147,7 +147,7 @@ faq_items:
 #-------------------------------
 # Gallery Settings
 gallery:
-  enable: true
+  enable: false
   gallery_title: Certifications <em>My Path To Cyber Enlightenment</em> # You can add an 'em' element to highlight text.
   gallery_description: The certifications I’ve earned reflect my dedication to mastering cybersecurity and my commitment to lifelong learning. Each marks a step forward, showcasing my knowledge and determination to stay ahead in this ever-changing field. This is just the beginning—I’m driven to expand this list, embrace new challenges, and grow with the dynamic world of cybersecurity.
   gallery_caption: "Certifications: Milestones of mastery, stepping stones to the future."
@@ -165,7 +165,7 @@ gallery_images:
 
 # Newsletter Settings
 mailchimp:
-  enable: true
+  enable: false
   mailchimp_title: Subscribe to Our <em>Newsletter</em> # You can add an 'em' element to highlight text.
   mailchimp_description: Join now and stay ahead in cybersecurity. Because your security matters!
   mailchimp_identifier: github.us10.list-manage.com/subscribe/post?u=21c208292da350e84bd383e0b&id=2adf53acb3
@@ -176,7 +176,7 @@ mailchimp:
 #-------------------------------
 # Contact Settings
 contact:
-  email: f/xvgojkyv # Add your form_id
+#  email: f/xvgojkyv # Add your form_id
   description: Have a question about cybersecurity, need expert guidance, or want to discuss potential collaboration? I’m always open to connecting with businesses and professionals who are passionate about securing their digital assets. Whether it’s addressing your security challenges, exploring innovative solutions, or simply exchanging ideas, don’t hesitate to reach out. Let’s work together to build a safer digital world!
 
 # NOTE
@@ -185,9 +185,9 @@ contact:
 
 #-------------------------------
 # Comment Section (Disqus)
-disqus-identifier: privacy-encrypt # Add your shortname for Disqus Comment. For example anvodstudio-demo
+#disqus-identifier: privacy-encrypt # Add your shortname for Disqus Comment. For example anvodstudio-demo
 
 
 #-------------------------------
 # Google Analytics
-google-analytics: G-YX3RPSSSB2 # Add your GA Tracking Id
+#google-analytics: G-YX3RPSSSB2 # Add your GA Tracking Id
