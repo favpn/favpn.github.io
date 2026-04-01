@@ -26,7 +26,7 @@ menu_settings:
 # Call to action button
 cta_button:
   enable: true
-  cta_button_link: "/shuffle-videos/"
+  cta_button_link: "/pages/shuffle-videos/"
   cta_button_text: Shuffle 5 videos!
 
 
