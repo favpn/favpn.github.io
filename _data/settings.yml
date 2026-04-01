@@ -2,9 +2,9 @@
 # Site Settings
 title: Fav Porn
 logo: "/images/logo.svg" # You can add own logo. For example '/images/logo.png'.
-logo_dark: "/images/logo-dark.svg"
-description: Baleon is a stylish and multifunctional theme for Jekyll
-color_scheme: auto # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
+logo_dark: "/images/favpn.png"
+description: My favorite porn videos collections
+color_scheme: dark # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
 
 
 #-------------------------------
@@ -36,7 +36,7 @@ author:
   author_intro: My Favorite Porn
   author_name: FavPN
   author_role: My best porn videos collection!
-  author_avatar: /images/logo-dark.svg
+  author_avatar: /images/hentai.png
 
 
 #-------------------------------
