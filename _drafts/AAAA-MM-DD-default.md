@@ -1,7 +1,7 @@
 ---
 # layout: post
 # title: 
-# date: AAAA-MM-DDDD HH:MM:SS -0300
+# date: AAAA-MM-DD HH:MM:SS -0300
 # image: /images/projects/network-sec-tools/netsectools-100.jpg
 # video_embed: video_embed_url
 # image_style: contain
