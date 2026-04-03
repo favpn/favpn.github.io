@@ -8,5 +8,5 @@
 # image_scale: 45        # percent of container width
 # subtitle: Cybersecurity/ DFIR Utility
 # carousel: true
-# category: Hot
+# tags: Hot
 ---
