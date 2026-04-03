@@ -41,7 +41,7 @@
 }
 
 :root[dark] {
-  --brand-color: #e62699;
+  --brand-color: #f59b25;
   --white: #fff;
   --light-gray: #f0f0f0;
   --blue-gray: #242424;
@@ -67,8 +67,8 @@
   --button-color: var(--white);
   --button-background-color: var(--background-alt-color);
   --button-background-hover: var(--brand-color);
-  --button-gradient-color: linear-gradient(180deg, #e72698 0%, #5b008c 100%);
-  --button-gradient-hover: linear-gradient(-90deg, #e72698 0%, #5b008c 100%);
+  --button-gradient-color: linear-gradient(180deg, #f59b25 0%, #be4400 100%);
+  --button-gradient-hover: linear-gradient(-90deg, #cc4900 0%, #f59b2563 100%);
 
   --border-color: #252629;
 
