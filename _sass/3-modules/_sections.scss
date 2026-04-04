@@ -38,12 +38,13 @@
 }
 
 .page-section-head {
-  max-width: 780px;
-  margin-bottom: 32px;
+  max-width: stretch;
+  margin-bottom: 42px;
+  text-align: -webkit-center;
 
   .page-section-title {
     margin-bottom: 24px;
-    font-size: 52px;
+    font-size: 36px;
     line-height: 1.2;
   }
 
