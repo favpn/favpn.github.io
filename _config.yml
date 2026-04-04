@@ -1,8 +1,8 @@
 #-------------------------------
 # General Site Settings
-baseurl: "docs"
-url: "https://favpn.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-destination: docs
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
 
 #-------------------------------
 # Build Settings
@@ -14,8 +14,6 @@ plugins:
 
 paginate: 10
 paginate_path: "/blog/page/:num"
-
-
 #-------------------------------
 # Collections
 collections:
