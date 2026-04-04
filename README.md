@@ -1,70 +1,76 @@
-# Baleon – Portfolio & Blog Theme for Jekyll
 
-Baleon is a stylish and multifunctional theme for Jekyll, perfect for creating portfolios and blogs. With it, you can quickly and easily create a stylish website that highlights your work and publications. Its intuitive interface, responsive design, and numerous customizable options make Baleon an excellent choice for professionals looking to showcase their projects in the best light.
+------------------------
+# Ferramentas e Requisitos
+_tools/get.js (Necessário Node.js e puppeteer)
+Ruby v3.1.7
+Jekyll
 
-* * *
+-----------
+## Jekyll Reset
+Caso tenha quebrado o runner (Ruby -v 3.1)
 
-### Demo
+1- bundle clean --force
+2- Remove-Item Gemfile.lock
+3- rm C:\Users\Marcos\.local\share\gem
+4- Jekyll serve
 
-Check the theme in action [Live Demo](https://baleon.netlify.app/) |
-[Artem Sheludko](https://jekyllthemes.io/developers/artem-sheludko)
+------------------------
+# Base files e Site renderizado
+O projeto consiste em dois repositórios
 
-* * *
+* favpn.site.source <- Codigo fonte do Site
+* favpn.github.io <- Site Fav PORN
 
-### Theme features
+## Para documentação do tema Baleon
+https://favpn.github.io/Documentation/index.html
 
-- Works with GitHub Pages (host it for free)
-- Dark and light mode
-- No jQuery, only vanilla JS
-- 100% responsive Design
-- Clean and Modern Code
-- Optimized for mobile devices
-- Section Projects
-- Section Blog
-- Section Testimonials
-- Section Gallery
-- Super fast performance ⚡⚡⚡
-- Social sharing buttons
-- Syntax highlighting
-- Compatible with modern browsers
-- Image Lazy loading
-- Image gallery
-- Tags
-- Tag page
-- Custom logo support
-- Supports video posts
-- Supports contact form (Formspree)
-- Supports MailChimp newsletter
-- Supports Disqus comments
-- Supports Google Analytics
-- Font Awesome Icons
-- Free Google Fonts
-- Free Updates & Support
+------------------------
+# Para publicações no site
 
-* * *
+### PN Embed/Main Pages
+**Urls EMBED**
+Facilidades para acessar o conteudo e obter dados do video
 
-### Installation
+https://www.xvideos.com/embedframe/
+https://xhamster.com/embed/
+https://embed.redtube.com/?id=
+https://www.pornhub.com/embed/
 
-#### Installing Ruby & Jekyll
+**Main Url**
+https://www.xvideos.com/video.ID/video
+https://xhamster.com/videos/ID
+https://www.redtube.com.br/ID
+https://pt.pornhub.com/view_video.php?viewkey=ID
 
-If this is your first time using Jekyll, please follow the [Jekyll docs](https://jekyllrb.com/docs/installation/) and make sure your local environment (including Ruby) is setup correctly.
+------------------------
+# Comandos Úteis
 
-* * *
+### Renomear vários de uma vez (VIA POWERSHELL)
+```
+$i=NUMERO_DO_ARQUIVO
+Get-ChildItem -File | Sort-Object { [int]($_.BaseName -replace '\D') } | ForEach-Object {
+  Rename-Item $_ -NewName ("AAAA-MM-DD-$i" + $_.Extension)
+  $i++
+}
+```
+**Editar o codigo acima antes!**
 
-### Deployment
+-----------
+### Procurar trechos de texto em arquivos (VIA POWERSHELL)
+```
+Get-ChildItem -Recurse -Filter *."extensão do arquivo" | Select-String "texto que deve ser procurado"
+```
+Editar o codigo acima antes!
 
-To run the theme locally, navigate to the theme directory and run `bundle install` to install the dependencies, then run `jekyll serve` or `bundle exec jekyll serve` to start the Jekyll server.
+-----------
+### Buildar o codigo fonte e exportar no outro repositório:
 
-I would recommend checking the [Deployment Methods](https://jekyllrb.com/docs/deployment-methods/) page on Jekyll website.
+`jekyll build --incremental` *(Recomendado)*
+ou
+`bundle exec jekyll build --incremental`
 
-* * *
+-----------
+#### Opções uteis:
+`--incremental` <- *Renderiza apenas o que foi modificado*
 
-### Documentation
-
-Before using the Baleon theme, please read the attached documentation.
-
-* * *
-
-### Support
-
-<p>If you have any questions, please feel free to contact me by mail <a href="mailto:hi.artemsheludko@gmail.com">Contact</a><p>
+`--destination {dir_export}` <- Especifica onde _site será buildado, aponte para o repositorio do site
